@@ -20,4 +20,8 @@ jobs:
       # NOTE: gitleaks-action may request a (free) GITLEAKS_LICENSE for organizations.
       # If the job fails asking for one, register at gitleaks.io and add it as an org secret,
       # or replace this step with the gitleaks binary run.
-      - uses: gitleaks/gitleaks-action@v2
+      - name: secret scan (gitleaks, license-free)
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz -o gl.tgz
+          tar -xzf gl.tgz gitleaks
+          ./gitleaks detect --source . --redact --no-banner --exit-code 1
