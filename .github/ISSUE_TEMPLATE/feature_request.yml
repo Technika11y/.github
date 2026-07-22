@@ -1,0 +1,30 @@
+name: Feature request
+description: Propose a new check, rule, or capability.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This suite's edge is the **intersection** of security, compliance, and accessibility.
+        Proposals only a dual-lens tool can make are prioritised over ones a mature
+        single-purpose scanner already handles well.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What real defect or risk goes undetected today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What should the tool do? Include the finding or message you'd expect to see.
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Authority (optional)
+      description: The standard, checkpoint, or regulation this maps to.
+      placeholder: WCAG 2.2 SC 4.1.2 · Matterhorn 13-004 · FALCPA · GDPR Art. 33

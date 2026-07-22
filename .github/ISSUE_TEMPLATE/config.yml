@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/technika11y/.github/security/policy
+    about: Please report vulnerabilities privately — do not open a public issue.
+  - name: The Technika11y suite
+    url: https://technika11y.github.io/
+    about: Status board, docs, and the rest of the tools.

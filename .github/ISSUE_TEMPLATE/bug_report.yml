@@ -1,0 +1,47 @@
+name: Bug report
+description: Something behaves differently than the README status table claims.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. These tools are pre-alpha and honest about it — if a README's
+        status table overstates what the code actually does, **that itself is a bug worth filing.**
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0-alpha, or a commit SHA
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: The command you ran and the output you got.
+      placeholder: |
+        Command:
+        Output:
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The smallest input file or snippet that shows the problem.
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: macOS 15 · Python 3.12 · Node 20
+  - type: checkboxes
+    id: not-a-vuln
+    attributes:
+      label: Confirm
+      options:
+        - label: This is not a security vulnerability (those go to Security → Advisories, per SECURITY.md)
+          required: true
