@@ -45,6 +45,20 @@ Open, defensive tooling at the intersection of access and security. Every repo i
 - [tron](https://github.com/technika11y/tron) — the Grid guardian: patrols observed traffic against the sanctioned-flow policy
 - [cyberdyne](https://github.com/technika11y/cyberdyne) — the safety governor: the off switch Skynet never had
 
+### They compose
+
+The tools are not a pile of unrelated scripts — they hand off to each other:
+
+```
+shadow-dom-auditor --vpat   →   vpat-generator   →   a dated, evidence-backed ACR
+```
+
+A real browser scan becomes a VPAT whose every claim traces to a finding. The scan will only ever
+*lower* a conformance claim, never raise one — automation can disprove a criterion, it can never
+prove one, so criteria a robot found clean stay **unevaluated** until a human signs them off.
+
+Findings also emit **SARIF 2.1.0**, so they land as GitHub code-scanning alerts rather than console text.
+
 ### Roadmap
 
 Twenty-eight planned; status is honest. `planned` means planned, not hidden — the rest land as
